@@ -1,53 +1,53 @@
-<!--一下子提供一种思路，欢迎大家发挥 -->
+* [概览](/udoris/README)
 
-# 概览
-云主机（UHost）为您提供安全可靠的弹性计算服务。 只需几分钟，您就可以在云端获取和启用 云主机，用于实现您的计算需求。随着业务需求的变化，您可以实时扩展或缩减计算资源。云主机 支持按实际使用的资源计费，可以为您节约计算成本。使用 云主机 可以极大降低您的软硬件采购成本，简化 IT 运维工作。
-
-
-#### <center>[了解](#1了解)   |   [购买及付费](#2购买及付费)   |   [使用指南](#3使用指南)   |   [常见问题](#4常见问题)</center>   
-
-## 1.了解
-
-面向云计算行业入门级用户，全方位、多角度、深入浅出的给你介绍产品，从基本信息、功能优势、应用场景等方面帮您快速了解，从容选择。
-
-* [什么是云主机](相对链接)
-* [功能与优势](相对链接)
-* [应用场景](相对链接)
-* [词汇表](_glossary.md)
-
-
-
-## 2.购买及付费
-
-面向云计算行业入门级用户，全方位、多角度、深入浅出的给你介绍产品，从基本信息、功能优势、应用场景等方面帮您快速了解，从容选择。
-
-* [计费模式](相对链接)
-* [定价表](相对链接)
-* [配置变更](相对链接)
-* [续费](相对链接)
-* [退款](相对链接)
-
-
-
-## 3.使用指南
-
-面向云计算行业入门级用户，全方位、多角度、深入浅出的给你介绍产品，从基本信息、功能优势、应用场景等方面帮您快速了解，从容选择。
-
-* 注意事项与使用限制
-  * [注意事项描述](相对链接)
-* 创建第一台云主机
-  * [创建资源](相对链接)
+* [产品动态](/udoris/dynamics)
+* [产品介绍](/udoris/architecture)
+  * [什么是云数据仓库UDoris](/udoris/architecture/simple_intro)
+  * [产品优势](/udoris/architecture/advantages)
+  * [应用场景](/udoris/architecture/scenarios)
+  * [基本概念](/udoris/architecture/basic_concept)
+  * [使用限制](/udoris/architecture/limit)
+* [快速上手](/udoris/gettingstart)
 * 操作指南
-  * [创建](相对链接)
-  * [管理](相对链接)
+  * [管理集群](/udoris/operation_guide/manage_cluster)
+  * [Backend配置升降级](/udoris/operation_guide/resize_cluster)
+  * [Frontend节点扩容](/udoris/operation_guide/frontend_resize_node)
+  * [重启实例](/udoris/operation_guide/restart_cluster)
+  * [重置管理员密码](/udoris/operation_guide/reset_password)
+  * [删除集群](/udoris/operation_guide/delete_cluster)
+  * [连接集群](/udoris/operation_guide/connect_cluster)
+* 数据导入
+  * [本地数据导入](/udoris/dump_data/local_data)
+  * [Kafka数据导入](/udoris/dump_data/kafka_data)
+  * [外部表数据导入](/udoris/dump_data/oracle_data)
+  * [通过JDBC导入](/udoris/dump_data/jdbc_data)
+* 开发指南
 
+  * [数据类型](/udoris/developer/data_type)
+  * SQL语法
+    * [创建库（Create Dabase）](/udoris/developer/sql_grammar/create_database)
+    * [创建表（Create Table）](/udoris/developer/sql_grammar/create_table)
+    * [创建视图（Create Materialized View）](/udoris/developer/sql_grammar/materialized_view)
+    * [插入数据（INSERT INTO）](/udoris/developer/sql_grammar/insert_into)
+    * [查询数据（SELECT）](/udoris/developer/sql_grammar/select)
+    * [删除数据](/udoris/developer/sql_grammar/delete)
+    * [修改表结构](/udoris/developer/sql_grammar/modify_table)
+    * [查看信息](/udoris/developer/sql_grammar/show_info)
+  * 函数
 
+    * [聚合函数](/udoris/developer/functions/aggregation)
+* 性能测试指南
+  * 性能测试工具
 
-## 4.常见问题
+    * [Star Schema Benchmark](/udoris/test/tool/ssb)
+  * 测试UDoris
 
-面向云计算行业入门级用户，全方位、多角度、深入浅出的给你介绍产品，从基本信息、功能优势、应用场景等方面帮您快速了解，从容选择。
+    * [多表测试](/udoris/test/udoris_test/multiple)
+  * [多表性能测试语句](/udoris/test/multiple_query)
+  * [500亿数据测试指南](/udoris/test/50billion)
+* [计费说明](/udoris/price)
+* 常见问题
 
-- 场景1:场景描述场景描述场景描述场景描述场景描述场景描述场景描述场景描述
-  - [问题描述](相对链接)
-- 场景2:场景描述场景描述场景描述场景描述场景描述场景描述场景描述场景描述
-  - [问题描述](相对链接)
+  * [产品购买与使用](/udoris/problem/product_use)
+  * [UDoris常见问题](/udoris/problem/doris_use)
+
