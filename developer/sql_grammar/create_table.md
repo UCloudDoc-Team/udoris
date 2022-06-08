@@ -53,8 +53,8 @@ distribution_info
             <code>aggr_type</code>
         </td>
         <td>聚合类型。云数据库UDoris支持的聚合类型，请参见
-            <a href="/udoris/developer/data_type>聚合类型
-    </td>
+            <a href="/udoris/developer/data_type">聚合类型</a></span>。
+    	</td>
 </tr>
 <tr>
     <td><code>index_definition</code></td>
