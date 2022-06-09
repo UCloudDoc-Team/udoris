@@ -43,60 +43,36 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class DorisJDBCDemo {
-
+public class DorisJdbcLoader {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_URL_PATTERN = "jdbc:mysql://%s:%d/%s?rewriteBatchedStatements=true";
     private static final String HOST = "your_host"; //集群详情给出的连接地址，也就是Frontend的master角色对应的ip
-    private static final int PORT = 8030; 
+    private static final int PORT = 8030;
     private static final String DB = "ssb";
     private static final String TBL = "example_tbl";
     private static final String USER = "root";
     private static final String PASSWD = "my_pass";//创建集群时设置的密码
-
     private static final int INSERT_BATCH_SIZE = 10000;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         insert();
     }
 
-    private static void insert() {
-        // 注意末尾不要加 分号 ";"
+    private static void insert() throws Exception {
         String query = "insert into " + TBL + " values(?, ?)";
-        // 设置 Label 以做到幂等。
-        // String query = "insert into " + TBL + " WITH LABEL my_label values(?, ?)";
-
-        Connection conn = null;
-        PreparedStatement stmt = null;
         String dbUrl = String.format(DB_URL_PATTERN, HOST, PORT, DB);
-        try {
-            Class.forName(JDBC_DRIVER);
-            conn = DriverManager.getConnection(dbUrl, USER, PASSWD);
-            stmt = conn.prepareStatement(query);
-
+        Class.forName(JDBC_DRIVER);
+        try (Connection conn = DriverManager.getConnection(dbUrl, USER, PASSWD)) {
+            PreparedStatement stmt = conn.prepareStatement(query);
             for (int i =0; i < INSERT_BATCH_SIZE; i++) {
                 stmt.setInt(1, i);
                 stmt.setInt(2, i * 100);
                 stmt.addBatch();
             }
-
             int[] res = stmt.executeBatch();
             System.out.println(res);
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null) {
-                    stmt.close();
-                }
-            } catch (SQLException se2) {
-                se2.printStackTrace();
-            }
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException se) {
-                se.printStackTrace();
-            }
         }
     }
 }
