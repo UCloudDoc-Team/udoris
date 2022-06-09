@@ -21,7 +21,6 @@
 * 数据导入
   * [本地数据导入](/udoris/dump_data/local_data)
   * [Kafka数据导入](/udoris/dump_data/kafka_data)
-  * [外部表数据导入](/udoris/dump_data/oracle_data)
   * [通过JDBC导入](/udoris/dump_data/jdbc_data)
 * 开发指南
 
