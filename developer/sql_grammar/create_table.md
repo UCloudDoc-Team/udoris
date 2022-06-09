@@ -216,55 +216,37 @@ PROPERTIES(
 
 - ### 创建外部表
 - 在Doris创建外部表的目的是可以通过Doris访问外部数据库。而Doris本身并不维护、存储任何外部数据。
-- 外部表查询需要通过数据库访问的标准接口(ODBC)来访问，目前集群未安装ODBC驱动
 
-主要通过 ENGINE 类型来标识是哪种类型的外部表，目前可选 MYSQL、BROKER、HIVE、ICEBERG 、HUDI。
+主要通过 ENGINE 类型来标识是哪种类型的外部表，目前可选 ODBC、HIVE、ICEBERG 、HUDI。
 
-**示例：创建MYSQL外部表。**
-
-```sql
-CREATE EXTERNAL TABLE example_db.table_mysql
-(
-	k1 DATE,
-	k2 INT,
-	k3 SMALLINT,
-	k4 VARCHAR(2048),
-	k5 DATETIME
-)
-ENGINE=mysql
-PROPERTIES
-(
-	"host" = "127.0.0.1",
-	"port" = "8239",
-	"user" = "mysql_user",
-	"password" = "mysql_passwd",
-	"database" = "mysql_db_test",
- "table" = "mysql_table_test",
- "charset" = "utf8mb4"
-)
-```
-
-**示例：创建一个数据文件存储在HDFS上的 broker 外部表, 数据使用 "|" 分割，"\n" 换行。**
+**示例：通过ODBC_Resource来创建ODBC外表。**
 
 ```sql
-CREATE EXTERNAL TABLE example_db.table_broker (
-	k1 DATE,
-	k2 INT,
-	k3 SMALLINT,
-	k4 VARCHAR(2048),
-	k5 DATETIME
-)
-ENGINE=broker
+CREATE EXTERNAL RESOURCE `oracle_odbc`
 PROPERTIES (
-	"broker_name" = "hdfs",
-	"path" = "hdfs://hdfs_host:hdfs_port/data1,hdfs://hdfs_host:hdfs_port/data2,hdfs://hdfs_host:hdfs_port/data3%2c4",
-	"column_separator" = "|",
-	"line_delimiter" = "\n"
-)
-BROKER PROPERTIES (
-	"username" = "hdfs_user",
-	"password" = "hdfs_password"
-)
+"type" = "odbc_catalog",
+"host" = "192.168.0.1",
+"port" = "8086",
+"user" = "test",
+"password" = "test",
+"database" = "test",
+"odbc_type" = "oracle",
+"driver" = "Oracle 19 ODBC driver"
+);
+     
+CREATE EXTERNAL TABLE `baseall_oracle` (
+  `k1` decimal(9, 3) NOT NULL COMMENT "",
+  `k2` char(10) NOT NULL COMMENT "",
+  `k3` datetime NOT NULL COMMENT "",
+  `k5` varchar(20) NOT NULL COMMENT "",
+  `k6` double NOT NULL COMMENT ""
+) ENGINE=ODBC
+COMMENT "ODBC"
+PROPERTIES (
+"odbc_catalog_resource" = "oracle_odbc",
+"database" = "test",
+"table" = "baseall"
+);
 ```
 
 **示例：创建一个hive外部表。**
