@@ -215,6 +215,8 @@ PROPERTIES(
 
 
 - ### 创建外部表
+- 在Doris创建外部表的目的是可以通过Doris访问外部数据库。而Doris本身并不维护、存储任何外部数据。
+- 外部表查询需要通过数据库访问的标准接口(ODBC)来访问，目前集群未安装ODBC驱动
 
 主要通过 ENGINE 类型来标识是哪种类型的外部表，目前可选 MYSQL、BROKER、HIVE、ICEBERG 、HUDI。
 
