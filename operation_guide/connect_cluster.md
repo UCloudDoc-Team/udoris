@@ -46,16 +46,12 @@
 ```java
 import java.sql.*;
 
-public class JDBC_UDoris {
-
-     public static void main(String[] args) throws SQLException {
-        Connection conn = null;
-        PreparedStatement stmt = null;
-        try {
-            Class.forName("com.mysql.jdbc.Driver");//加载驱动
-            String url = "jdbc:mysql://node_ip:9030/ssb"; //node_ip为frontend节点的ip
-            conn = DriverManager.getConnection(url, "root", password);//password是登陆集群的密码
-            stmt = conn.prepareStatement("select * from ssb.lineorder");
+public class DorisConnect {
+    public static void main(String[] args) throws Exception {
+        Class.forName("com.mysql.jdbc.Driver");//加载驱动
+        String url = "jdbc:mysql://node_ip:9030/ssb"; //node_ip为frontend节点的ip
+        try(Connection conn = DriverManager.getConnection(url, "root", password)){//password是登陆集群的密码
+            PreparedStatement stmt = conn.prepareStatement("select * from ssb.lineorder");
             ResultSet resultSet = stmt.executeQuery();
             ResultSetMetaData metaData = resultSet.getMetaData();
             int columnCount = metaData.getColumnCount();
@@ -66,13 +62,6 @@ public class JDBC_UDoris {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            if (stmt != null) {
-                stmt.close();
-            }
-            if (conn != null) {
-                conn.close();
-            }
         }
     }
 }
