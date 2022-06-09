@@ -23,9 +23,9 @@ UDoris模块包括Frontend 和 Backend 两类，作用如下。
 - 极简运维，弹性伸缩；Frontend节点和Backend节点都支持扩展，Frontend节点的扩容和缩容过程，不影响当前系统运行；Backend 节点的扩容和缩容过程，不影响当前系统的性能，数据均衡会自动进行。
 - 高性能、高可用、高可靠；数据和元数据都默认使用3副本存储，在少数节点宕机的情况下，依然可以保证数据的可靠性。Doris 会自动检查和修复损坏的数据，并将请求自动路由到健康的节点，7*24 小时保证数据的可用性。
 
-Doris官网地址，请参见https://doris.apache.org/。
+Doris官网地址，请参见https://doris.apache.org
 
-Doris参考文档链接，请参见https://doris.apache.org/get-starting/get-starting.html。
+Doris参考文档链接，请参见https://doris.apache.org/get-starting/get-starting.html
 
 ## 增强特性
 
