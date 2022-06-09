@@ -24,7 +24,7 @@
 
     * [数据类型](/udoris/developer/data_type)
     * SQL语法
-      * [创建库（Create Dabase）](/udoris/developer/sql_grammar/create_database)
+      * [创建库（Create Database）](/udoris/developer/sql_grammar/create_database)
       * [创建表（Create Table）](/udoris/developer/sql_grammar/create_table)
       * [创建视图（Create Materialized View）](/udoris/developer/sql_grammar/materialized_view)
       * [插入数据（INSERT INTO）](/udoris/developer/sql_grammar/insert_into)
