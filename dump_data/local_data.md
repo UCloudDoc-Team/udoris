@@ -105,9 +105,9 @@ import java.nio.charset.StandardCharsets;
 </dependency>
  */
 public class DorisStreamLoader {
-    //可以选择填写 FE 地址以及 FE 的 http_port，但须保证客户端和 BE 节点的连通性。
+    //可以选择填写 frontend 地址以及 frontend 的 http_port，但须保证客户端和 BE 节点的连通性。
     private final static String HOST = "your_host";//集群详情给出的连接地址，也就是Frontend的master角色对应的ip
-    private final static int PORT = 8040;
+    private final static int PORT = 8030;
     private final static String DATABASE = "ssb";   // 要导入的数据库
     private final static String TABLE = "lineorder";     // 要导入的表
     private final static String USER = "root";   
@@ -122,7 +122,7 @@ public class DorisStreamLoader {
             .setRedirectStrategy(new DefaultRedirectStrategy() {
                 @Override
                 protected boolean isRedirectable(String method) {
-                    // 如果连接目标是 FE，则需要处理 307 redirect。
+                    // 如果连接目标是 frontend，则需要处理 307 redirect。
                     return true;
                 }
             });
