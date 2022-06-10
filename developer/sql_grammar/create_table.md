@@ -292,7 +292,17 @@ PROPERTIES (
 );
 ```
 
-官网参考文档
+**创建表时，关于 Partition 和 Bucket 的数量和数据量的建议。**
+
+- 一个表的 Tablet 总数量等于 (Partition num * Bucket num)。
+- 一个表的 Tablet 数量，在不考虑扩容的情况下，推荐略多于整个集群的磁盘数量。
+- 单个 Tablet 的数据量理论上没有上下界，但建议在 1G - 10G 的范围内。如果单个 Tablet 数据量过小，则数据的聚合效果不佳，且元数据管理压力大。如果数据量过大，则不利于副本的迁移、补齐，且会增加 Schema Change 或者 Rollup 操作失败重试的代价（这些操作失败重试的粒度是 Tablet）。
+- 当 Tablet 的数据量原则和数量原则冲突时，建议优先考虑数据量原则。
+- 在建表时，每个分区的 Bucket 数量统一指定。但是在动态增加分区时（`ADD PARTITION`），可以单独指定新分区的 Bucket 数量。可以利用这个功能方便的应对数据缩小或膨胀。
+- 一个 Partition 的 Bucket 数量一旦指定，不可更改。所以在确定 Bucket 数量时，需要预先考虑集群扩容的情况。比如当前只有 3 台 host，每台 host 有 1 块盘。如果 Bucket 的数量只设置为 3 或更小，那么后期即使再增加机器，也不能提高并发度。
+- 举一些例子：假设在有10台BE，每台BE一块磁盘的情况下。如果一个表总大小为 500MB，则可以考虑4-8个分片。5GB：8-16个分片。50GB：32个分片。500GB：建议分区，每个分区大小在 50GB 左右，每个分区16-32个分片。5TB：建议分区，每个分区大小在 50GB 左右，每个分区16-32个分片
+
+**官网参考文档**
 
 - 创建表的更多信息，请参见[CREATE TABLE](https://doris.apache.org/zh-CN/sql-manual/sql-reference/Data-Definition-Statements/Create/CREATE-TABLE.html#create-table)。
 - 创建外部表，请参见[CREATE-EXTERNAL-TABLE](https://doris.apache.org/zh-CN/sql-manual/sql-reference/Data-Definition-Statements/Create/CREATE-EXTERNAL-TABLE.html)。

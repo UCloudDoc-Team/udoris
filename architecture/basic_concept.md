@@ -21,6 +21,13 @@ FE 分为 Leader，Follower 和 Observer 三种角色。3台FE中包含1个 Lead
 
 Doris的后端节点，简称BE，以C++语言为主，主要负责数据存储与管理、查询计划执行等工作。
 
-### Tablet
+## Tablet & Partition
 
-Doris 中表的逻辑分片，也是 Doris 中副本管理的基本单位，每个表根据分区和分桶机制被划分成多个 Tablet 存储在不同 BE 节点上。
+在 Doris 的存储引擎中，用户数据被水平划分为若干个数据分片（Tablet，也称作数据分桶）。每个 Tablet 包含若干数据行。各个 Tablet 之间的数据没有交集，并且在物理上是独立存储的。多个 Tablet 在逻辑上归属于不同的分区（Partition）。一个 Tablet 只属于一个 Partition。而一个 Partition 包含若干个 Tablet。若干个 Partition 组成一个 Table。Partition 可以视为是逻辑上最小的管理单元。数据的导入与删除，都可以或仅能针对一个 Partition 进行
+
+### Row & Column
+
+Row：即用户的一行数据，Column： 用于描述一行数据中不同的字段，Column 可以分为两大类：Key 和 Value。从业务角度看，Key 和 Value 可以分别对应维度列和指标列。从聚合模型的角度来说，Key 列相同的行，会聚合成一行。其中 Value 列的聚合方式由用户在建表时指定
+
+### 
+
