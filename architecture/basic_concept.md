@@ -21,6 +21,6 @@ FE 分为 Leader，Follower 和 Observer 三种角色。3台FE中包含1个 Lead
 
 Doris的后端节点，简称BE，以C++语言为主，主要负责数据存储与管理、查询计划执行等工作。
 
+### Tablet
 
-
-
+Doris 中表的逻辑分片，也是 Doris 中副本管理的基本单位，每个表根据分区和分桶机制被划分成多个 Tablet 存储在不同 BE 节点上。
