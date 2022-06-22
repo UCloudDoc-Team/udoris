@@ -2,7 +2,7 @@
 
 使用 ALTER TABLE COLUMN 语句来完成表结构修改。
 
-该语句用于对已有 table 进行 Schema change 操作。schema change 是异步的，任务提交成功则返回，之后可使用[SHOW ALTER](https://doris.apache.org/zh-CN/sql-manual/sql-reference/Show-Statements/SHOW-ALTER.html) 命令查看进度
+该语句用于对已有 table 进行 Schema change 操作。schema change 是异步的，任务提交成功则返回，之后可使用[SHOW ALTER](https://doris.apache.org/zh-CN/docs/sql-manual/sql-reference/Show-Statements/SHOW-ALTER.html#show-alter) 命令查看进度
 
 **基本语法：**
 
@@ -182,4 +182,4 @@ ADD COLUMN v2 INT MAX DEFAULT "0" AFTER k2 TO example_rollup_index,
 ORDER BY (k3,k1,k2,v2,v1) FROM example_rollup_index;
 ```
 
-更多信息，请具体参考[官方文档](https://doris.apache.org/zh-CN/sql-manual/sql-reference/Data-Definition-Statements/Alter/ALTER-TABLE-COLUMN.html#alter-table-column)
+更多信息，请具体参考[官方文档](https://doris.apache.org/zh-CN/docs/sql-manual/sql-reference/Data-Definition-Statements/Alter/ALTER-TABLE-COLUMN.html#alter-table-column)
