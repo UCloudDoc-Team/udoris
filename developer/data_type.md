@@ -1,6 +1,6 @@
 # 数据类型
 
-Doris完整数据类型请参考[官方数据类型](https://doris.apache.org/zh-CN/sql-manual/sql-reference/Data-Types/BIGINT.html)。
+Doris完整数据类型请参考[官方数据类型](https://doris.apache.org/zh-CN/docs/sql-manual/sql-reference/Data-Types/BIGINT.html)。
 
 列类型
 
