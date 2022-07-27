@@ -2,7 +2,7 @@
 
 使用 ALTER TABLE COLUMN 语句来完成表结构修改。
 
-该语句用于对已有 table 进行 Schema change 操作。schema change 是异步的，任务提交成功则返回，之后可使用[SHOW ALTER](https://doris.apache.org/zh-CN/docs/sql-manual/sql-reference/Show-Statements/SHOW-ALTER.html#show-alter) 命令查看进度
+该语句用于对已有 table 进行 Schema change 操作。schema change 是异步的，任务提交成功则返回，之后可使用[SHOW ALTER](https://doris.apache.org/docs/sql-manual/sql-reference/Show-Statements/SHOW-ALTER?_highlight=show&_highlight=alte) 命令查看进度
 
 **基本语法：**
 
