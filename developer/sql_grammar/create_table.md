@@ -304,5 +304,6 @@ PROPERTIES (
 
 **官网参考文档**
 
-- 创建表的更多信息，请参见[CREATE TABLE](https://doris.apache.org/docs/sql-manual/sql-reference/Data-Definition-Statements/Create/CREATE-TABLE?_highlight=create&_highlight=table)。
+- 创建表的更多信息，请参见[CREATE TABLE](https://doris.apache.org/docs/sql-manual/sql-reference/Data-Definition-Statements/Create/CREATE-TABLE/)。
 - 创建外部表，请参见[CREATE-EXTERNAL-TABLE](https://doris.apache.org/docs/sql-manual/sql-reference/Data-Definition-Statements/Create/CREATE-EXTERNAL-TABLE)。
+
