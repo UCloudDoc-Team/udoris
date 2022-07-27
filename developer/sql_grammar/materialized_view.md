@@ -161,5 +161,5 @@ mysql> desc duplicate_table;
 
 ## 官方文档
 
-创建物化视图的更多信息，请参见[Create Materialized View](https://doris.apache.org/zh-CN/docs/sql-manual/sql-reference/Data-Definition-Statements/Create/CREATE-MATERIALIZED-VIEW.html)。
+创建物化视图的更多信息，请参见[Create Materialized View](https://doris.apache.org/docs/sql-manual/sql-reference/Data-Definition-Statements/Create/CREATE-MATERIALIZED-VIEW)。
 

@@ -63,4 +63,4 @@ udoris对每个用户设置内存限制为Backend节点内存*90%
 
 Doris支持修改数据库名、表名、分区名、物化视图（Rollup）名称，以及列的类型、注释、默认值等等。但遗憾的是，目前不支持修改列名。
 
-更多常见问题请参考[官网常见问题](https://doris.apache.org/zh-CN/docs/faq/data-faq.html)
+更多常见问题请参考[官网常见问题](https://doris.apache.org/docs/faq/data-faq)

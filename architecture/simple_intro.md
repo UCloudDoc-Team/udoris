@@ -25,7 +25,7 @@ UDoris模块包括Frontend 和 Backend 两类，作用如下。
 
 Doris官网地址，请参见https://doris.apache.org
 
-Doris参考文档链接，请参见https://doris.apache.org/zh-CN/docs/get-starting/get-starting.html
+Doris参考文档链接，请参见https://doris.apache.org/docs/get-starting/
 
 ## 增强特性
 

@@ -182,4 +182,4 @@ ADD COLUMN v2 INT MAX DEFAULT "0" AFTER k2 TO example_rollup_index,
 ORDER BY (k3,k1,k2,v2,v1) FROM example_rollup_index;
 ```
 
-更多信息，请具体参考[官方文档](https://doris.apache.org/zh-CN/docs/sql-manual/sql-reference/Data-Definition-Statements/Alter/ALTER-TABLE-COLUMN.html#alter-table-column)
+更多信息，请具体参考[官方文档](https://doris.apache.org/docs/sql-manual/sql-reference/Data-Definition-Statements/Alter/ALTER-TABLE-COLUMN)

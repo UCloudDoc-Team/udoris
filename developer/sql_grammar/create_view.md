@@ -63,4 +63,4 @@ WHERE k1 = 20160112 GROUP BY k1,k2,k3;
 
 官网参考文档
 
-创建视图的更多信息，请参见[Create View](https://doris.apache.org/zh-CN/sql-manual/sql-reference/Data-Definition-Statements/Create/CREATE-VIEW.html#create-view)。
+创建视图的更多信息，请参见[Create View](https://doris.apache.org/docs/sql-manual/sql-reference/Data-Definition-Statements/Create/CREATE-VIEW)。
