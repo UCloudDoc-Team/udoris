@@ -22,7 +22,7 @@
   * [本地数据导入](/udoris/dump_data/local_data)
   * [Kafka数据导入](/udoris/dump_data/kafka_data)
   * [通过JDBC导入](/udoris/dump_data/jdbc_data)
-  * [US3导入](/udoris/dump_data/s3_data)
+  * [US3导入](/udoris/dump_data/us3_data)
 * 开发指南
 
   * [数据类型](/udoris/developer/data_type)
