@@ -9,11 +9,11 @@
 
 ## 准备工作
 
-1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者大数据下选择"对象存储 US3"，进入到[US3控制台](https://console.ucloud.cn/ufile/ufile)下，点击**创建存储空间**按钮，地域选择需要和创建的udoris集群所在的地域一致。具体文档可参考：[对象存储US3文档](https://docs.ucloud.cn/ufile/README)
+1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者大数据下选择"对象存储 US3"，进入到[US3控制台](https://console.ucloud.cn/ufile/ufile)下，点击**创建存储空间**按钮，地域选择需要和创建的udoris集群所在的地域一致。具体文档可参考：[对象存储US3文档](https://docs.ucloud.cn/ufile/README)。
 
    ![image-20220808193619178](../images/us3-create.png)
 
-2. 上传需要导入的数据文件到US3
+2. 上传需要导入的数据文件到US3。
 
    ![image-20220808194109034](../images/us3-upload.png)
 
