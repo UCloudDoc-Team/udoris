@@ -1,15 +1,15 @@
 # US3 Load
 
-从0.14 版本开始，Doris 支持通过 S3 协议直接从支持 S3 协议的在线存储系统导入数据。以下是US3导入数据的介绍。
+从0.14 版本开始，Doris 支持通过 S3 协议直接从对象存储中导入数据。以下是US3导入数据的介绍。
 
 ## 使用场景
 
-1. 源数据在 支持 S3 协议的存储系统中，如 S3,BOS 等。
-2. 数据量在 几十到百 GB 级别。
+1. 源数据在支持S3协议的存储系统中，如 S3,baidu object storage等。
+2. 数据量在几十到百GB 级别。
 
 ## 准备工作
 
-1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者大数据下选择"对象存储 US3"，进入到[US3控制台](https://console.ucloud.cn/ufile/ufile)下，点击**创建存储空间**按钮，地域选择需要和创建的udoris集群所在的地域一致。具体文档可参考：[对象存储US3文档](https://docs.ucloud.cn/ufile/README)。
+1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者大数据下选择"对象存储 US3"，进入到[US3控制台](https://console.ucloud.cn/ufile/ufile)下，点击**创建存储空间**按钮，地域选择需要和创建的udoris集群所在的地域一致。支持S3协议的地域请参考[接入地域](https://docs.ucloud.cn/ufile/s3/s3_introduction)。
 
    ![image-20220808193619178](../images/us3-create.png)
 
@@ -29,10 +29,10 @@
     )
     WITH S3
     (
-        "AWS_ENDPOINT" = "AWS_ENDPOINT",
-        "AWS_ACCESS_KEY" = "AWS_ACCESS_KEY",
-        "AWS_SECRET_KEY"="AWS_SECRET_KEY",
-        "AWS_REGION" = "AWS_REGION"
+        "AWS_ENDPOINT" = "http://internal.s3-${Region}.ufileos.com",
+        "AWS_ACCESS_KEY" = "ACCESS_KEY",
+        "AWS_SECRET_KEY"="SECRET_KEY",
+        "AWS_REGION" = "REGION"
     )
     PROPERTIES
     (
@@ -61,7 +61,7 @@
 | strict_mode      | 是否对数据进行严格限制。默认为 false。                       |
 | timezone         | 指定某些受时区影响的函数的时区，如 `strftime/alignment_timestamp/from_unixtime` 等 |
 
-## 导入状态
+## 导入示例
 
 实例所属于北京地域下导入100G的文件示例：
 
@@ -92,6 +92,8 @@ PROPERTIES
 取消导入参考语法：CANCEL LOAD FROM demo WHERE LABEL = "broker_load_name";
 
 
+
+使用说明：udoris默认不开启broker，如需使用，请联系技术支持
 
 注：更多S3 Load参数请参考官网 [S3 Load文档](https://doris.apache.org/zh-CN/docs/data-operate/import/import-way/s3-load-manual)
 
