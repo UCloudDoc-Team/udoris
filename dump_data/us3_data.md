@@ -4,12 +4,12 @@
 
 ## 使用场景
 
-1. 源数据在支持S3协议的存储系统中，如 S3,baidu object storage等。
+1. 源数据在支持S3协议的存储系统中，如 US3。
 2. 数据量在几十到百GB 级别。
 
 ## 准备工作
 
-1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者大数据下选择"对象存储 US3"，进入到[US3控制台](https://console.ucloud.cn/ufile/ufile)下，点击**创建存储空间**按钮，地域选择需要和创建的udoris集群所在的地域一致。支持S3协议的地域请参考[接入地域](https://docs.ucloud.cn/ufile/s3/s3_introduction)。
+1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，进入到[US3控制台](https://console.ucloud.cn/ufile/ufile)下，点击**创建存储空间**按钮，地域选择需要和创建的udoris集群所在的地域一致。支持S3协议的地域请参考[接入地域](https://docs.ucloud.cn/ufile/s3/s3_introduction)。
 
    ![image-20220808193619178](../images/us3-create.png)
 
@@ -17,7 +17,7 @@
 
    ![image-20220808194109034](../images/us3-upload.png)
 
-## 导入示例
+## 导入命令说明
 
 在同一地域下的云主机上连接云数据仓库UDoris任一Frontend节点，执行以下命令。
 
