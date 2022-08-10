@@ -9,7 +9,7 @@
 
 ## 准备工作
 
-1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，进入到[US3控制台](https://console.ucloud.cn/ufile/ufile)下，点击**创建存储空间**按钮，地域选择需要和创建的udoris集群所在的地域一致。支持S3协议的地域请参考[接入地域](https://docs.ucloud.cn/ufile/s3/s3_introduction)。
+1. 登录UCloud账号进入到[US3控制台](https://console.ucloud.cn/ufile/ufile)下，点击**创建存储空间**按钮，地域选择需要和创建的udoris集群所在的地域一致。支持S3协议的地域请参考[接入地域](https://docs.ucloud.cn/ufile/s3/s3_introduction)。
 
    ![image-20220808193619178](../images/us3-create.png)
 
