@@ -55,7 +55,7 @@ udoris支持最长查询时间为6000s, 如果仍然未完成, 会被cancel掉
 
 ### 查询报内存不够：detailMessage = Memory limit exceeded
 
-udoris对每个用户设置内存限制为Backend节点内存*90%
+udoris对每个用户设置内存限制为Backend节点内存*70%
 
 ### Doris 是否支持修改列名？
 
@@ -63,4 +63,9 @@ udoris对每个用户设置内存限制为Backend节点内存*90%
 
 Doris支持修改数据库名、表名、分区名、物化视图（Rollup）名称，以及列的类型、注释、默认值等等。但遗憾的是，目前不支持修改列名。
 
+### 是否支持Broker Load方式导入数据？
+
+udoris默认不开启broker,如需要使用，[请联系技术支持](https://spt.ucloud.cn/)
+
 更多常见问题请参考[官网常见问题](https://doris.apache.org/docs/faq/data-faq)
+

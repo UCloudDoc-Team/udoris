@@ -46,7 +46,7 @@
 | ---------------- | ------------------------------------------------------------ |
 | example_db       | 需要导入数据的数据库名称                                     |
 | exmpale_label_1  | 自定义的label名称，用于查看导入进度                          |
-| your_bucket_name | us3的存储空间域名，又名Bucket名称，请查看上述准备工作中的第一步所示图 |
+| your_bucket_name | us3的存储空间域名，即Bucket名称，请查看上述准备工作中的第一步所示图 |
 | your_file.txt    | 在us3上传成功的需要导入的文件名                              |
 | load_test        | 需要导入的表名称                                             |
 | terminated       | 导入数据的分隔符                                             |
@@ -56,9 +56,9 @@
 | aws_region       | Bucket所属地域，[参考地域列表](https://docs.ucloud.cn/api/summary/regionlist) |
 | properties       | 指定导入的相关参数。目前支持以下参数                         |
 | timeout          | 导入超时时间。默认为 4 小时。单位秒                          |
-| exec_mem_limit   | 导入内存限制。默认为 2GB。单位为字节。                       |
-| max_filter_ratio | 最大容忍可过滤（数据不规范等原因）的数据比例。默认零容忍。取值范围为 0 到 1。 |
-| strict_mode      | 是否对数据进行严格限制。默认为 false。                       |
+| exec_mem_limit   | 导入内存限制。默认为 2GB。单位为字节                         |
+| max_filter_ratio | 最大容忍可过滤（数据不规范等原因）的数据比例。默认零容忍。取值范围为 0 到 1 |
+| strict_mode      | 是否对数据进行严格限制。默认为 false                         |
 | timezone         | 指定某些受时区影响的函数的时区，如 `strftime/alignment_timestamp/from_unixtime` 等 |
 
 ## 导入示例
@@ -91,11 +91,9 @@ PROPERTIES
 
 取消导入参考语法：CANCEL LOAD FROM demo WHERE LABEL = "broker_load_name";
 
+注：
 
+​     更多S3 Load参数请参考官网 [S3 Load文档](https://doris.apache.org/zh-CN/docs/data-operate/import/import-way/s3-load-manual)
 
-使用说明：udoris默认不开启broker，如需使用，请联系技术支持
-
-注：更多S3 Load参数请参考官网 [S3 Load文档](https://doris.apache.org/zh-CN/docs/data-operate/import/import-way/s3-load-manual)
-
-​		更多US3参数及详细操作请参照[US3文档](https://docs.ucloud.cn/ufile/README)
+​     更多US3参数及详细操作请参照[US3文档](https://docs.ucloud.cn/ufile/README)
 
