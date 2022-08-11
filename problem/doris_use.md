@@ -65,7 +65,9 @@ Doris支持修改数据库名、表名、分区名、物化视图（Rollup）名
 
 ### 是否支持Broker Load方式导入数据？
 
-udoris默认不开启broker,如需要使用，[请联系技术支持](https://spt.ucloud.cn/)
+udoris默认不开启broker，如需要使用，[请联系技术支持](https://spt.ucloud.cn/)
+
+
 
 更多常见问题请参考[官网常见问题](https://doris.apache.org/docs/faq/data-faq)
 
