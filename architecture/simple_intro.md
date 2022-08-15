@@ -1,4 +1,4 @@
-# 什么是云数据仓库 UDoris
+# 什么是云数据仓库 UDW Apache Doris
 
 云数据仓库UDW Apache Doris为开源列式存储管理系统Doris提供了一整套高性能，高可用，极简运维，弹性伸缩的托管服务。UDW Apache Doris是基于Apache Doris（Apache、Apache Doris 以及相关的开源产品的名称都归属于 Apache 软件基金会）的内核开发，分布式架构非常简洁，是基于MPP架构的分析型数据库，支持对海量数据进行高并发查询，并且可以支持10PB以上的超大数据集。适用于多种数据分析需求场景，例如BI报表分析，实时数据分析，交互式数据分析和探索式数据分析等。您可以在UCloud上便捷的购买UDW Apache Doris，拥有一套Doris私有的集群。
 

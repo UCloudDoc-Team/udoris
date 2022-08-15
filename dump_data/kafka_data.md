@@ -6,9 +6,10 @@
   温馨提示：
    <ol>
      <li>UKafka为付费产品，具体价格请参照创建页所展示。</li>
-     <li>请确保UKafka集群和云数据仓库 UDoris集群在同一地域内（同一VPC）,如不同请使用 私有网络 VPC -> 网络互通</li>
+     <li>请确保UKafka集群和云数据仓库 UDW Apache Doris集群在同一地域内（同一VPC）,如不同请使用 私有网络 VPC -> 网络互通</li>
    </ol>
 </blockquote>
+
 
 
 ## 前置条件
