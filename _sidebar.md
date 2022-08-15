@@ -2,7 +2,7 @@
 * [概览](/udoris/README)
 * [产品动态](/udoris/dynamics)
 * [产品介绍](/udoris/architecture)
-    * [云数据仓库UDW Apache Doris简介](/udoris/architecture/simple_intro)
+    * [UDW Apache Doris简介](/udoris/architecture/simple_intro)
     * [产品优势](/udoris/architecture/advantages)
     * [应用场景](/udoris/architecture/scenarios)
     * [基本概念](/udoris/architecture/basic_concept)
