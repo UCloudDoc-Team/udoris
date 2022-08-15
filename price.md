@@ -4,7 +4,7 @@
 
 ## 规格及定价
 
-请您登录用户控制台后在[创建云数据仓库UDoris](https://console.ucloud.cn/udw/doris/create)页面进行查看
+请您登录用户控制台后在[创建云数据仓库 UDW Apache Doris](https://console.ucloud.cn/udw/doris/create)页面进行查看
 
 ## 查看消费明细
 

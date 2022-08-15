@@ -1,10 +1,10 @@
 # 多表测试
 
-## 新建云数据仓库UDoris
+## 新建云数据仓库 UDW Apache Doris
 
 请参阅 [快速上手](/udoris/gettingstart)
 
-## 连接云数据仓库UDoris
+## 连接云数据仓库 UDW Apache Doris
 
 请参阅 **操作指南->[连接集群](/udoris/operation_guide/connect_cluster)**
 

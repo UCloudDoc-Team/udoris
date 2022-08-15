@@ -1,7 +1,7 @@
 # 快速开始
 
 ## 创建集群
-1.登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者数据仓库下选择“数据仓库 UDW Doris”，进入到数据仓库 UDoris控制台下。
+1.登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者数据仓库下选择“数据仓库 UDW Apache Doris”，进入到数据仓库 UDW Apache Doris控制台下。
 
 ![udoris-create](images/udoris-create.png)
 
@@ -72,7 +72,7 @@
 
 
 
-## 使用云数据仓库UDoris
+## 使用云数据仓库 UDW Apache Doris
 
 ### 连接集群
 

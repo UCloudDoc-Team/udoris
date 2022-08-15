@@ -19,7 +19,7 @@
 
 ## 导入命令说明
 
-在同一地域下的云主机上连接云数据仓库UDoris任一Frontend节点，执行以下命令。
+在同一地域下的云主机上连接云数据仓库UDW Apache Doris任一Frontend节点，执行以下命令。
 
     LOAD LABEL example_db.exmpale_label_1
     (

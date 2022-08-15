@@ -2,11 +2,11 @@
 
 ## 地域（Region）
 
-购买云数据仓库 UDoris的服务器所处地理位置，您可按需要选择云数据仓库 UDoris集群所在的Region。
+购买云数据仓库 UDW Apache Doris的服务器所处地理位置，您可按需要选择云数据仓库UDW Apache Doris集群所在的Region。
 
-## 云数据仓库UDoris集群
+## 云数据仓库UDW Apache Doris集群
 
-云数据仓库 UDoris是由一个或三个Frontend节点和三个以上的Backend节点组成的集群。
+云数据仓库 UDW Apache Doris是由一个或三个Frontend节点和三个以上的Backend节点组成的集群。
 
 ## 副本（Replica）
 

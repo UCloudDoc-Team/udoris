@@ -17,7 +17,7 @@
   +--------------------+
   | Database           |
   +--------------------+
-  | information_schema |               |
+  | information_schema |               
   | udoris             |
   +--------------------+
   2 rows in set (0.00 sec)
@@ -51,11 +51,11 @@
 
 ### 查询超时：detailMessage = query timeout
 
-udoris支持最长查询时间为6000s, 如果仍然未完成, 会被cancel掉
+数据仓库 UDW Apache Doris支持最长查询时间为6000s, 如果仍然未完成, 会被cancel掉
 
 ### 查询报内存不够：detailMessage = Memory limit exceeded
 
-udoris对每个用户设置内存限制为Backend节点内存*70%
+数据仓库 UDW Apache Doris对每个用户设置内存限制为Backend节点内存*70%
 
 ### Doris 是否支持修改列名？
 
@@ -65,7 +65,7 @@ Doris支持修改数据库名、表名、分区名、物化视图（Rollup）名
 
 ### 是否支持Broker Load方式导入数据？
 
-udoris默认不开启broker，如需要使用，[请联系技术支持](https://spt.ucloud.cn/)
+数据仓库 UDW Apache Doris默认不开启broker，如需要使用，[请联系技术支持](https://spt.ucloud.cn/)
 
 
 

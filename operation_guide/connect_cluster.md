@@ -4,13 +4,13 @@
 
 ### 操作步骤
 
-  1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者数据仓库下选择“数据仓库 UDW Doris”，进入到[数据仓库UDoris控制台](https://console.ucloud.cn/udw/doris)
+  1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者数据仓库下选择“数据仓库 UDW Doris”，进入到[数据仓库 UDW Apache Doris控制台](https://console.ucloud.cn/udw/doris)
 
   2. 在**集群列表**页面，点击**详情**可查看集群节点列表，列表中已列出节点地址。
 
   3. 下载mysql-client，官方下载地址：[下载mysql-client](https://dev.mysql.com/downloads/mysql/)。安装请参见[快速上手](/udoris/gettingstart)
 
-  4. 连接云数据仓库UDoris，在同一地域下的云主机上执行以下命令。
+  4. 连接云数据仓库 UDW Apache Doris，在同一地域下的云主机上执行以下命令。
 
      ```
      mysql -uroot -h<任一frontend节点IP地址> -P9030 -p<创建集群时设置的密码>
@@ -20,8 +20,8 @@
 
 | 参数 | 说明                                                         |
 | ---- | ------------------------------------------------------------ |
-| -h   | 任一Frontend节点的ip地址(建议用详情页给出的CLI连接地址)。<br />要求mysql-client所在云主机和云数据仓库 UDoris在同一地域内（同一网段） |
-| -p   | Doris Frontend 通过 mysql 协议查询连接端口，默认9030               |
+| -h   | 任一Frontend节点的ip地址(建议用详情页给出的CLI连接地址)。<br />要求mysql-client所在云主机和云数据仓库 UDW Apache Doris在同一地域内（同一网段） |
+| -p   | Doris Frontend 通过 mysql 协议查询连接端口，默认9030         |
 | -u   | 管理用户名，默认root                                         |
 | -p   | 您创建集群时设置的管理密码                                   |
 

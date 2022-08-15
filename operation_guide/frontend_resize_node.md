@@ -1,6 +1,6 @@
 # 配置升降级
 
-当您创建集群选择的是单Frontend节点时，当前集群的性能已经满足不了实际需求时，云数据仓库 UDoris提供了Frontend节点扩容到高可用节点。
+当您创建集群选择的是单Frontend节点时，当前集群的性能已经满足不了实际需求时，云数据仓库 UDW Apache Doris提供了Frontend节点扩容到高可用节点。
 
 <blockquote>
 温馨提示：
@@ -11,7 +11,7 @@
 </blockquote>
 
 
-1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者数据仓库下选择“数据仓库 UDW Doris”，进入到[数据仓库UDoris控制台](https://console.ucloud.cn/udw/doris)下，在列表中选择**操作 -> Frontend节点扩容**。
+1. 登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者数据仓库下选择“数据仓库 UDW Doris”，进入到[数据仓库 UDW Apache Doris控制台](https://console.ucloud.cn/udw/doris)下，在列表中选择**操作 -> Frontend节点扩容**。
 
 2. 在集群升级弹窗页，选择扩容到高可用节点。
 
