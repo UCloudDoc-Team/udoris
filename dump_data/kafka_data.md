@@ -1,6 +1,6 @@
 # Kafka数据导入
 
-登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者大数据下选择“Kafka消息队列 UKafka”，进入到[Kafka消息队列 UKafka控制台](https://console.ucloud.cn/ukafka/ukafka)下，点击**创建集群**按钮。进入创建集群页面，根据创建页提供的配置进行选择并下单。
+登录UCloud账号进入到[用户控制台](https://passport.ucloud.cn/#login)，在全部产品下搜索或者大数据下选择“Kafka消息队列 UKafka“，进入到[Kafka消息队列 UKafka控制台](https://console.ucloud.cn/ukafka/ukafka)下，点击**创建集群**按钮。进入创建集群页面，根据创建页提供的配置进行选择并下单。
 
 <blockquote>
   温馨提示：
